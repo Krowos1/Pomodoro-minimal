@@ -1,0 +1,29 @@
+# Wails / build output
+/build/bin/
+/build/darwin/
+/build/windows/
+/build/linux/
+/frontend/wailsjs/
+
+# Go
+*.test
+*.out
+coverage.txt
+coverage.html
+
+# Logs / temp
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.*

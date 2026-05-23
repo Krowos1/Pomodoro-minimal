@@ -1,0 +1,14 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "apple-pomodoro-wails",
+  "outputfilename": "Pomodoro",
+  "frontend:dir": "frontend",
+  "frontend:install": "",
+  "frontend:build": "",
+  "frontend:dev:watcher": "",
+  "frontend:dev:serverUrl": "",
+  "author": {
+    "name": "Dmitro",
+    "email": "krowosdmitro@gmail.com"
+  }
+}

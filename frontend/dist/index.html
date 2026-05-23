@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pomodoro</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="aurora aurora-one"></div>
+  <div class="aurora aurora-two"></div>
+
+  <main class="app-shell">
+    <header class="topbar glass compact-glass">
+      <div>
+        <p class="eyebrow">Minimal Focus</p>
+        <h1>Pomodoro</h1>
+      </div>
+      <div class="top-actions">
+        <button class="icon-button" id="themeToggle" title="Switch theme">🌙</button>
+        <button class="icon-button" id="soundToggle" title="Sound">🔔</button>
+        <button class="pill ghost" id="exportBtn">Export</button>
+      </div>
+    </header>
+
+    <section class="main-layout">
+      <article class="timer-card glass">
+        <div class="mode-tabs" id="modeTabs">
+          <button data-mode="focus" class="active">Focus</button>
+          <button data-mode="short">Short Break</button>
+          <button data-mode="long">Long Break</button>
+        </div>
+
+        <div class="timer-wrap">
+          <svg class="progress-ring" viewBox="0 0 280 280" aria-hidden="true">
+            <circle class="ring-bg" cx="140" cy="140" r="122"></circle>
+            <circle class="ring-value" id="ring" cx="140" cy="140" r="122"></circle>
+          </svg>
+          <div class="time-panel">
+            <div id="modeLabel" class="mode-label">Focus</div>
+            <div id="time" class="time">25:00</div>
+            <div id="roundLabel" class="round-label">Round 1 of 4</div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="primary" id="startPauseBtn">Start</button>
+          <button class="secondary" id="resetBtn">Reset</button>
+          <button class="secondary" id="skipBtn">Skip</button>
+        </div>
+
+        <label class="title-field" for="sessionTitle">
+          <span>Focus session title</span>
+          <input id="sessionTitle" maxlength="70" placeholder="For example: Go, LeetCode, English..." />
+        </label>
+      </article>
+
+      <aside class="side-panel">
+        <nav class="section-tabs glass compact-glass" id="sectionTabs">
+          <button class="active" data-section="settings">Settings</button>
+          <button data-section="stats">Stats</button>
+          <button data-section="history">History</button>
+        </nav>
+
+        <section class="tab-section active glass" id="settingsSection">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Settings</p>
+              <h2>Rhythm</h2>
+            </div>
+            <button class="mini" id="saveSettingsBtn">Save</button>
+          </div>
+
+          <div class="settings-list">
+            <label><span>Focus</span><input id="focusMin" type="number" min="1" max="180" value="25"><small>min</small></label>
+            <label><span>Short Break</span><input id="shortMin" type="number" min="1" max="60" value="5"><small>min</small></label>
+            <label><span>Long Break</span><input id="longMin" type="number" min="1" max="120" value="15"><small>min</small></label>
+            <label><span>Rounds</span><input id="rounds" type="number" min="1" max="12" value="4"><small>pcs</small></label>
+          </div>
+
+          <div class="switch-row">
+            <span>Auto-start next mode</span>
+            <button class="switch" id="autoStart"><span></span></button>
+          </div>
+        </section>
+
+        <section class="tab-section glass" id="statsSection">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Today</p>
+              <h2>Stats</h2>
+            </div>
+          </div>
+          <div class="stats">
+            <div><strong id="todayFocus">0</strong><span>minutes</span></div>
+            <div><strong id="todaySessions">0</strong><span>sessions</span></div>
+            <div><strong id="streak">0</strong><span>days</span></div>
+          </div>
+          <div class="week" id="weekChart"></div>
+        </section>
+
+        <section class="tab-section glass" id="historySection">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Log</p>
+              <h2>Recent sessions</h2>
+            </div>
+            <button class="mini danger" id="clearHistoryBtn">Clear</button>
+          </div>
+          <div class="history" id="history"></div>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
