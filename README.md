@@ -1,4 +1,4 @@
-# Apple Pomodoro Wails
+# Pomodoro timer
 
 A clean, minimal Pomodoro timer built with **Go + Wails**.
 
