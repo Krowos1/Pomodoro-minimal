@@ -23,6 +23,10 @@ A clean, minimal Pomodoro timer built with **Go + Wails**.
 - Wails v2 CLI
 - A supported desktop WebView runtime
 
+## Download
+
+You can download the latest version of the app from the [Releases](../../releases) page.
+
 ## Run in development mode
 
 ```bash
