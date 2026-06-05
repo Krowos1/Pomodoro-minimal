@@ -2,6 +2,8 @@
 
 A clean, minimal Pomodoro timer built with **Go + Wails**.
 
+![App preview](preview.jpg)
+
 ## Features
 
 - Focus, Short Break, and Long Break modes
