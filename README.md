@@ -2,7 +2,7 @@
 
 A clean, minimal Pomodoro timer built with **Go + Wails**.
 
-![App preview](preview.jpg)
+![App preview](preview.JPG)
 
 ## Features
 
