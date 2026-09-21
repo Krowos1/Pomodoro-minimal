@@ -2,6 +2,8 @@
 
 A focused desktop Pomodoro timer built with Go, Wails and dependency-free ES modules.
 
+![](https://github.com/Krowos1/Pomodoro-minimal/blob/main/view.PNG)
+
 ## Features
 
 - Focus, short-break and optional long-break modes
