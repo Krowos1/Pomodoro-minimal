@@ -10,6 +10,7 @@
 *.out
 coverage.txt
 coverage.html
+/.cache/
 
 # Logs / temp
 *.log

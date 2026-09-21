@@ -11,7 +11,7 @@ if errorlevel 1 (
 where wails >nul 2>nul
 if errorlevel 1 (
   echo Wails CLI not found. Installing Wails v2...
-  go install github.com/wailsapp/wails/v2/cmd/wails@latest
+  go install github.com/wailsapp/wails/v2/cmd/wails@v2.16.0
   if errorlevel 1 (
     echo Failed to install Wails. Check your internet connection and Go PATH.
     pause
@@ -25,6 +25,15 @@ if errorlevel 1 (
   pause
   exit /b 1
 )
-echo Starting Apple Pomodoro...
+pushd frontend
+call npm run build
+if errorlevel 1 (
+  popd
+  echo Frontend build failed.
+  pause
+  exit /b 1
+)
+popd
+echo Starting Pomodoro...
 wails dev
 pause

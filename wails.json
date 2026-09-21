@@ -1,14 +1,23 @@
 {
   "$schema": "https://wails.io/schemas/config.v2.json",
-  "name": "apple-pomodoro-wails",
-  "outputfilename": "Pomodoro",
+  "name": "PomodoroMinimal",
+  "outputfilename": "Pomodoro-Minimal",
   "frontend:dir": "frontend",
   "frontend:install": "",
-  "frontend:build": "",
+  "frontend:build": "npm run build",
   "frontend:dev:watcher": "",
   "frontend:dev:serverUrl": "",
+  "postBuildHooks": {
+    "windows/amd64": "go run ../../scripts/windows_resources ${bin}"
+  },
   "author": {
-    "name": "Dmitro",
-    "email": "krowosdmitro@gmail.com"
+    "name": "Dmitro"
+  },
+  "info": {
+    "companyName": "Dmitro",
+    "productName": "Pomodoro Minimal",
+    "productVersion": "1.2.0",
+    "copyright": "Copyright 2026 Dmitro",
+    "comments": "Pomodoro focus timer"
   }
 }

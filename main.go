@@ -16,11 +16,15 @@ func main() {
 	app := NewApp()
 
 	err := wails.Run(&options.App{
-		Title:     "Pomodoro",
-		Width:     1180,
-		Height:    780,
-		MinWidth:  960,
-		MinHeight: 660,
+		Title:            "Pomodoro",
+		StartHidden:      true,
+		Width:            1320,
+		Height:           900,
+		MinWidth:         1180,
+		MinHeight:        720,
+		Frameless:        true,
+		WindowStartState: options.Normal,
+		OnBeforeClose:    app.beforeClose,
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},
